@@ -1,0 +1,18 @@
+Photo, name
+Job desc
+summary
+personal identification
+	full name
+	dob
+	address
+	email
+	linked in
+Education, GPA
+Working Experience, picts
+Programming Skills and others
+Certifications, seminar, picts
+Organizational experience, picts
+Languange Profiency, IELTS
+
+Software Engineering Projects, picts
+Data Science Projects, picts
