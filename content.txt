@@ -1,5 +1,10 @@
+Header
+======
 Photo, name
 Job desc
+
+About
+=====
 summary
 personal identification
 	full name
@@ -7,12 +12,20 @@ personal identification
 	address
 	email
 	linked in
+Programming Skills and others
+
+Resume
+===========
 Education, GPA
 Working Experience, picts
-Programming Skills and others
-Certifications, seminar, picts
 Organizational experience, picts
+
+Certifications
+==============
+Certifications, seminar, picts
 Languange Profiency, IELTS
 
+Portofolios
+===========
 Software Engineering Projects, picts
 Data Science Projects, picts
