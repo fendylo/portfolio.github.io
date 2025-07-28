@@ -621,6 +621,16 @@ section.about {
   bottom: 0;
 }
 
+/* 1. Ensure the img itself animates */
+.portfolio .portfolio-wrap {
+  transition: transform 0.3s ease-in-out;
+}
+
+/* 2. Scale it up slightly on hover */
+.portfolio .portfolio-wrap:hover {
+  transform: scale(1.03);
+}
+
 /*--------------------------------------------------------------
 # Portfolio Details
 --------------------------------------------------------------*/
@@ -1116,72 +1126,94 @@ section.about {
 }
 
 /* ==== Skill cards =================================================== */
-.skill-card{
-  background:#fff;
-  border-radius:1rem;
-  box-shadow:0 4px 14px rgba(0,0,0,.05);
-  padding:1.5rem;
-  transition:transform .3s,box-shadow .3s;
+.skill-card {
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
-.skill-card:hover{
-  transform:translateY(-4px);
-  box-shadow:0 8px 20px rgba(0,0,0,.08);
+.skill-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
 }
-.skill-card-title{
-  font-size:1rem;
-  font-weight:600;
-  color:var(--text-heading,#173b6c);
-  margin-bottom:1rem;
-  display:flex;
-  align-items:center;
+.skill-card-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-heading, #173b6c);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
 }
 
 /* ==== Skill cards (unchanged) ====================================== */
-.skill-card{background:#fff;border-radius:1rem;box-shadow:0 4px 14px rgba(0,0,0,.05);padding:1.5rem;transition:transform .3s,box-shadow .3s}
-.skill-card:hover{transform:translateY(-4px);box-shadow:0 8px 20px rgba(0,0,0,.08)}
-.skill-card-title{font-size:1rem;font-weight:600;color:var(--text-heading,#173b6c);margin-bottom:1rem;display:flex;align-items:center}
+.skill-card {
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.skill-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+.skill-card-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-heading, #173b6c);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+}
 
 /* ==== Icon grid (new) ============================================== */
 /*  ⚑  default → **two-up** by giving each icon cell 50 % basis        */
 /*  flexbox is simpler and bullet-proof across all browsers            */
-.skill-list{
-  list-style:none;
-  margin:0;
-  padding:0;
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:center;      /* centre the row                       */
-  gap:.75rem 0;                /* vertical, no extra horiz gap         */
+.skill-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* centre the row                       */
+  gap: 0.75rem 0; /* vertical, no extra horiz gap         */
 }
 
-.skill-list li{
-  flex:0 0 50%;                /* << guarantees at least 2-up          */
-  max-width:120px;             /* prevents super-wide cells            */
-  text-align:center;
-  font-size:.75rem;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
+.skill-list li {
+  flex: 0 0 50%; /* << guarantees at least 2-up          */
+  max-width: 120px; /* prevents super-wide cells            */
+  text-align: center;
+  font-size: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.skill-list i{
-  font-size:2.2rem;
-  line-height:1;
-  margin-bottom:.25rem;
+.skill-list i {
+  font-size: 2.2rem;
+  line-height: 1;
+  margin-bottom: 0.25rem;
 }
 
 /* md ≥ 576 px → three-up when space allows  ------------------------- */
-@media (min-width:576px){
-  .skill-list li{flex:0 0 33.333%}
+@media (min-width: 576px) {
+  .skill-list li {
+    flex: 0 0 33.333%;
+  }
 }
 
 /* xl ≥ 1356 px → four-up in roomy desktop layouts  ------------------ */
-@media (min-width:1356px){
-  .skill-list li{flex:0 0 25%}
+@media (min-width: 1356px) {
+  .skill-list li {
+    flex: 0 0 25%;
+  }
 }
 
 /* Motion-safe tweak */
-@media (prefers-reduced-motion:reduce){
+@media (prefers-reduced-motion: reduce) {
   .skill-card,
-  .skill-card:hover{transition:none}
+  .skill-card:hover {
+    transition: none;
+  }
 }
